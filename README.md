@@ -45,3 +45,7 @@ d.bark()
 One day all classes will inherit from Funverted and bound methods will be a thing of the past!
 
 That day is not today.  Inheriting from Funverted is not currently supported, and calling a function in this way often creates a new `Funverted` object, which may impose a performance penalty.
+
+### THERE IS CURRENTLY A SERIOUS BUG PREVENTING FUNVERT FROM BEING USED OUTSIDE funvert.py ITSELF.
+[See Issue 1](https://github.com/dmoney/funvert/issues/1).
+This is being evolved from a gist, so it is not ready for production use yet.  The only way to use it currently is to copy/paste funvert() and Funverted into the same file or REPL session.
