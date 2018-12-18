@@ -10,7 +10,6 @@ import inspect
 def stackFrameContext(depth):
     context = {}
 
-    #print(repr(inspect.stack()))
     # depth + 1 because 0 is the context of the calling function
     frame = inspect.stack()[depth + 1].frame
 
@@ -112,12 +111,3 @@ if __name__ == '__main__':
             self.assertEqual(three._obj, 3)
 
     unittest.main()
-    # def incd(x, by=1):
-    #     return x + by
-    # fv = funvert
-    # print('7 ==', fv(1).incd().incd(2).incd(by=3))
-    # #=>  7 == 7
-
-    #BUG:
-    #print('8 ==', fv(1).incd().incd(2).incd(by=3) + 1)
-    #TypeError: unsupported operand type(s) for +: 'Funverted' and 'int'
