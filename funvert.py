@@ -60,6 +60,18 @@ class Funverted:
     def __rtruediv__(self, lhs):
         return lhs / self._obj
 
+    def __floordiv__(self, rhs):
+        return self._obj // rhs
+
+    def __rfloordiv__(self, lhs):
+        return lhs // self._obj
+
+    def __mod__(self, rhs):
+        return self._obj % rhs
+
+    def __rmod__(self, lhs):
+        return lhs % self._obj
+
 def funvert(obj):
     if isinstance(obj, Funverted):
         return obj

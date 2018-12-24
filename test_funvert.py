@@ -93,6 +93,26 @@ class TestFunvert(unittest.TestCase):
         three = 6 / two
         self.assertEqual(three, 3)
 
+    def test_can_use_floordiv_operator_before(self):
+        five = funvert(5)
+        two = five // 2
+        self.assertEqual(two, 2)
+
+    def test_can_use_floordiv_operator_after(self):
+        two = funvert(2)
+        two_again = 5 // two
+        self.assertEqual(two_again, 2)
+
+    def test_can_use_mod_operator_before(self):
+        five = funvert(5)
+        one = five % 2
+        self.assertEqual(one, 1)
+
+    def test_can_use_mod_operator_after(self):
+        two = funvert(2)
+        one = 5 % two
+        self.assertEqual(one, 1)
+
     def test_can_use_parameter(self):
         one = funvert(1)
         three = one.incremented(2)
