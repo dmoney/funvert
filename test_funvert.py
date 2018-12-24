@@ -63,6 +63,36 @@ class TestFunvert(unittest.TestCase):
         two = 1 + one
         self.assertEqual(two, 2)
 
+    def test_can_use_minus_operator_before(self):
+        one = funvert(1)
+        zero = one - 1
+        self.assertEqual(zero, 0)
+
+    def test_can_use_minus_operator_after(self):
+        one = funvert(1)
+        zero = 1 - one
+        self.assertEqual(zero, 0)
+
+    def test_can_use_multiply_operator_before(self):
+        two = funvert(2)
+        four = two * 2
+        self.assertEqual(four, 4)
+
+    def test_can_use_multiply_operator_after(self):
+        two = funvert(2)
+        four = 2 * two
+        self.assertEqual(four, 4)
+
+    def test_can_use_divide_operator_before(self):
+        four = funvert(4)
+        two = four / 2
+        self.assertEqual(two, 2)
+
+    def test_can_use_divide_operator_after(self):
+        two = funvert(2)
+        three = 6 / two
+        self.assertEqual(three, 3)
+
     def test_can_use_parameter(self):
         one = funvert(1)
         three = one.incremented(2)

@@ -42,6 +42,24 @@ class Funverted:
     def __radd__(self, lhs):
         return lhs + self._obj
 
+    def __sub__(self, rhs):
+        return self._obj - rhs
+
+    def __rsub__(self, lhs):
+        return lhs - self._obj
+
+    def __mul__(self, rhs):
+        return self._obj * rhs
+
+    def __rmul__(self, lhs):
+        return lhs * self._obj
+
+    def __truediv__(self, rhs):
+        return self._obj / rhs
+
+    def __rtruediv__(self, lhs):
+        return lhs / self._obj
+
 def funvert(obj):
     if isinstance(obj, Funverted):
         return obj
