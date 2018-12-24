@@ -36,6 +36,12 @@ class Funverted:
     def __str__(self):
         return str(self._obj)
 
+    def __add__(self, rhs):
+        return self._obj + rhs
+
+    def __radd__(self, lhs):
+        return lhs + self._obj
+
 def funvert(obj):
     if isinstance(obj, Funverted):
         return obj
