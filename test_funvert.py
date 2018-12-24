@@ -53,12 +53,12 @@ class TestFunvert(unittest.TestCase):
         one_prime = funvert(one)
         self.assertTrue(one is one_prime)
 
-    def test_can_use_operator_afterward(self):
+    def test_can_use_plus_operator_after(self):
         one = funvert(1)
         two = one + 1
         self.assertEqual(two, 2)
 
-    def test_can_use_operator_before(self):
+    def test_can_use_plus_operator_before(self):
         one = funvert(1)
         two = 1 + one
         self.assertEqual(two, 2)
