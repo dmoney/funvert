@@ -21,9 +21,9 @@ def incd(x, by=1):
 print('7 ==', fv(1).incd().incd(2).incd(by=3))
 #=>  7 == 7
 
-# this changes the type, so operators like + don't work currently.
-# print('8 ==', fv(1).incd().incd(2).incd(by=3) + 1)
-# ==> TypeError: unsupported operand type(s) for +: 'Funverted' and 'int'
+# You can use a funverted object in arithmetic expressions:
+print('8 ==', fv(1).incd().incd(2).incd(by=3) + 1)
+#==> 8 == 8
 
 # use ._obj to get the plain type object
 print('8 ==', fv(1).incd().incd(2).incd(by=3),_obj + 1)
@@ -41,6 +41,8 @@ d = fv(Dog())
 d.bark()
 #=> Woof!
 ```
+
+Ideally you can use a funverted object anywhere you'd use the object it wraps, however this may not be true in some cases.  Basic arithmetic operators are implemented.  Other operators or "dunder methods" will be implemented as needed or as requested.
 
 One day all classes will inherit from Funverted and bound methods will be a thing of the past!
 
